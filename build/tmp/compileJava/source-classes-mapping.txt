@@ -1,0 +1,72 @@
+autorota/controller/ControllerHelper.java
+ autorota.controller.ControllerHelper
+autorota/repository/RotaRepository.java
+ autorota.repository.RotaRepository
+autorota/AutorotaApplication.java
+ autorota.AutorotaApplication
+autorota/controller/ProfileController.java
+ autorota.controller.ProfileController
+autorota/repository/RoleRepository.java
+ autorota.repository.RoleRepository
+autorota/domain/Availability.java
+ autorota.domain.Availability
+autorota/domain/Day.java
+ autorota.domain.Day
+autorota/domain/Shift.java
+ autorota.domain.Shift
+autorota/services/HolidayValidation.java
+ autorota.services.HolidayValidation
+autorota/controller/AvailabilityController.java
+ autorota.controller.AvailabilityController
+autorota/services/SettingValidation.java
+ autorota.services.SettingValidation
+autorota/domain/Business.java
+ autorota.domain.Business
+autorota/controller/AuthenticationController.java
+ autorota.controller.AuthenticationController
+autorota/SecurityConfig.java
+ autorota.SecurityConfig
+autorota/repository/ShiftRepository.java
+ autorota.repository.ShiftRepository
+autorota/controller/RotaController.java
+ autorota.controller.RotaController
+autorota/domain/UserInfo.java
+ autorota.domain.UserInfo
+autorota/controller/HolidayController.java
+ autorota.controller.HolidayController
+autorota/services/ProfileValidation.java
+ autorota.services.ProfileValidation
+autorota/domain/Role.java
+ autorota.domain.Role
+autorota/repository/UserRepository.java
+ autorota.repository.UserRepository
+autorota/services/BookingValidation.java
+ autorota.services.BookingValidation
+autorota/controller/BookingController.java
+ autorota.controller.BookingController
+autorota/services/RotaValidation.java
+ autorota.services.RotaValidation
+autorota/repository/HolidayRepository.java
+ autorota.repository.HolidayRepository
+autorota/WebConfig.java
+ autorota.WebConfig
+autorota/domain/Rota.java
+ autorota.domain.Rota
+autorota/controller/SettingsController.java
+ autorota.controller.SettingsController
+autorota/controller/RegisterController.java
+ autorota.controller.RegisterController
+autorota/services/RegisterValidation.java
+ autorota.services.RegisterValidation
+autorota/services/CustomUserDetailsService.java
+ autorota.services.CustomUserDetailsService
+autorota/repository/BusinessRepository.java
+ autorota.repository.BusinessRepository
+autorota/repository/DayRepository.java
+ autorota.repository.DayRepository
+autorota/repository/BookingRepository.java
+ autorota.repository.BookingRepository
+autorota/domain/Holiday.java
+ autorota.domain.Holiday
+autorota/domain/Booking.java
+ autorota.domain.Booking

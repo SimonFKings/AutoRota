@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="AutomatedTesting" tests="10" skipped="0" failures="0" errors="0" timestamp="2020-05-14T14:57:14" hostname="Simons-MBP.broadband" time="6.176">
+  <properties/>
+  <testcase name="checkDateOnDays2" classname="AutomatedTesting" time="2.612"/>
+  <testcase name="checkDateOnDays3" classname="AutomatedTesting" time="1.917"/>
+  <testcase name="noOfBookings" classname="AutomatedTesting" time="0.0"/>
+  <testcase name="checkBankHolidayTest2" classname="AutomatedTesting" time="0.21"/>
+  <testcase name="checkBankHolidayTest3" classname="AutomatedTesting" time="0.099"/>
+  <testcase name="checkBankHolidayTest" classname="AutomatedTesting" time="0.208"/>
+  <testcase name="userSetForename" classname="AutomatedTesting" time="0.016"/>
+  <testcase name="checkDateOnDays" classname="AutomatedTesting" time="1.114"/>
+  <testcase name="userSetRole" classname="AutomatedTesting" time="0.0"/>
+  <testcase name="userSetAvailability" classname="AutomatedTesting" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

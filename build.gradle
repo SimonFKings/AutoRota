@@ -1,0 +1,85 @@
+buildscript {
+	ext {
+		springBootVersion = '1.5.10.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		classpath("org.springframework:springloaded:1.2.7.RELEASE")
+
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+
+group = 'com.EX'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+ext {
+	jasperVersion = '9.0.0.M26'
+	lombokVersion = '1.16.18'
+	groovyVersion = '2.4.4'
+	spockVersion = '1.1-groovy-2.4'
+}
+
+dependencies {
+	// Spring Boot
+	compile("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
+	compile("org.springframework.boot:spring-boot-devtools")
+
+	// JSP
+	compile("org.apache.tomcat.embed:tomcat-embed-jasper:9.0.0.M26")
+	compile("javax.servlet:jstl:1.2")
+	// Bootstrap
+	compile("org.webjars:bootstrap:3.3.7")
+	// persistence
+	compile("org.springframework.boot:spring-boot-starter-data-jpa:${springBootVersion}")
+	runtime("mysql:mysql-connector-java")
+	// security
+		testCompile("org.springframework.boot:spring-boot-starter-test:${springBootVersion}")
+			testCompile('org.springframework.security:spring-security-test')
+
+	// Spring
+		compile("org.springframework.boot:spring-boot-starter-security:${springBootVersion}")
+	// security
+	compile("org.springframework.boot:spring-boot-starter-security:${springBootVersion}")
+	compile("org.springframework.security:spring-security-taglibs:4.2.3.RELEASE")
+	// Spring
+	testCompile("org.springframework.boot:spring-boot-starter-test:${springBootVersion}")
+	testCompile('org.springframework.security:spring-security-test:4.1.1.RELEASE')
+//	//Upload
+//	compile 'commons-fileupload:commons-fileupload:1.3.1'
+//
+//	// Groovy
+	testCompile("org.codehaus.groovy:groovy-all:$groovyVersion")
+//	// Spock
+	testCompile("junit:junit:4.12")
+	testCompile("org.spockframework:spock-core:$spockVersion")
+	testCompile "org.spockframework:spock-spring:$spockVersion"
+	testCompile("org.hamcrest:hamcrest-core:1.3")
+	testCompile("org.hamcrest:hamcrest-library:1.3")
+//	// Spock-reports
+//	testCompile( 'com.athaydes:spock-reports: 1.3.1' ) {
+//		transitive = false // this avoids affecting your version of Groovy/Spock
+//
+		runtime('com.h2database:h2')
+//
+		compile 'com.squareup.okhttp:okhttp:2.5.0'
+		compile 'org.json:json:20171018'
+/// https://mvnrepository.com/artifact/nz.ac.waikato.cms.weka/weka-stable
+		compile group: 'nz.ac.waikato.cms.weka', name: 'weka-stable', version: '3.8.0'
+//	implementation 'org.junit.jupiter:junit-jupiter'
+
+
+}
+
+

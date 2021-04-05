@@ -1,0 +1,26 @@
+@relation 'Predict the shift each user will do'
+
+@attribute user {1,2}
+@attribute date {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31}
+@attribute day {mon,tue,wed,thu,fri,sat,sun}
+@attribute temp numeric
+@attribute pop numeric
+@attribute bankHoliday {true,false}
+@attribute bookings numeric
+@attribute shiftTimes {00:00-01:00,OFF-OFF}
+
+@data
+1,21,mon,8.5,95,true,0,?
+2,21,mon,8.5,95,true,0,?
+1,22,tue,5,60,false,0,?
+2,22,tue,5,60,false,0,?
+1,23,wed,4.7,20,false,0,?
+2,23,wed,4.7,20,false,0,?
+1,24,thu,3.5,10,true,0,?
+2,24,thu,3.5,10,true,0,?
+1,25,fri,2.4,80,true,0,?
+2,25,fri,2.4,80,true,0,?
+1,26,sat,9.3,0,true,0,?
+2,26,sat,9.3,0,true,0,?
+1,27,sun,6.6,0,false,0,?
+2,27,sun,6.6,0,false,0,?

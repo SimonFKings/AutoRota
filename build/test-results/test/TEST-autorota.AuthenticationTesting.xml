@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="autorota.AuthenticationTesting" tests="4" skipped="0" failures="0" errors="0" timestamp="2020-05-14T14:57:53" hostname="Simons-MBP.broadband" time="3.281">
+  <properties/>
+  <testcase name="test 1: Request login returns loginPage" classname="autorota.AuthenticationTesting" time="3.227"/>
+  <testcase name="test 2: Request access-denied returns accessDenied" classname="autorota.AuthenticationTesting" time="0.007"/>
+  <testcase name="test 3: Request error-login returns loginPage" classname="autorota.AuthenticationTesting" time="0.021"/>
+  <testcase name="test2 #testId: Request #request returns #viewName" classname="autorota.AuthenticationTesting" time="0.023"/>
+  <system-out><![CDATA[2020-05-14 15:57:53.211  INFO 34594 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [autorota.AuthenticationTesting]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-05-14 15:57:53.212  INFO 34594 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [autorota.AuthenticationTesting]: AuthenticationTesting does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-05-14 15:57:53.246  INFO 34594 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration autorota.AutorotaApplication for test class autorota.AuthenticationTesting
+2020-05-14 15:57:53.248  INFO 34594 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2020-05-14 15:57:53.251  INFO 34594 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@10bab32e, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@727117df, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6fd960e7, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6ed96549, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2b3f987f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@518abd28, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@757031a6, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@50a6e16c, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@78d7767, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3eaf943, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@77e31599, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@10293788, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@7cf34ca5]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::       (v1.5.10.RELEASE)
+
+2020-05-14 15:57:53.493  WARN 34594 --- [    Test worker] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/simonfkings/.gradle/caches/modules-2/files-2.1/org.json/json/20171018/36ced462c97f0845b4a7b266a25cebe95d18baa3/json-20171018.jar!/org/json/JSONObject.class
+	jar:file:/Users/simonfkings/.gradle/caches/modules-2/files-2.1/com.vaadin.external.google/android-json/0.0.20131108.vaadin1/fa26d351fe62a6a17f5cda1287c1c6110dec413f/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2020-05-14 15:57:53.501  INFO 34594 --- [    Test worker] autorota.AuthenticationTesting           : Starting AuthenticationTesting on Simons-MBP.broadband with PID 34594 (/Users/simonfkings/svn/sfk7/code/trunk/build/classes/groovy/test started by simonfkings in /Users/simonfkings/svn/sfk7/code/trunk)
+2020-05-14 15:57:53.502  INFO 34594 --- [    Test worker] autorota.AuthenticationTesting           : No active profile set, falling back to default profiles: default
+2020-05-14 15:57:53.504  INFO 34594 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@bc82038: startup date [Thu May 14 15:57:53 BST 2020]; root of context hierarchy
+2020-05-14 15:57:55.369  INFO 34594 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@bc82038: startup date [Thu May 14 15:57:53 BST 2020]; root of context hierarchy
+2020-05-14 15:57:55.430  INFO 34594 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/access-denied],methods=[GET]}" onto public java.lang.String autorota.controller.AuthenticationController.error()
+2020-05-14 15:57:55.430  INFO 34594 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user-logout],methods=[GET]}" onto public java.lang.String autorota.controller.AuthenticationController.logout(org.apache.catalina.servlet4preview.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,org.springframework.ui.Model)
+2020-05-14 15:57:55.430  INFO 34594 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[GET]}" onto public java.lang.String autorota.controller.AuthenticationController.loginForm()
+2020-05-14 15:57:55.430  INFO 34594 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error-login],methods=[GET]}" onto public java.lang.String autorota.controller.AuthenticationController.invalidLogin(org.springframework.ui.Model)
+2020-05-14 15:57:55.430  INFO 34594 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home],methods=[GET]}" onto public java.lang.String autorota.controller.AuthenticationController.successLogin(org.springframework.ui.Model)
+2020-05-14 15:57:55.431  INFO 34594 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-05-14 15:57:55.432  INFO 34594 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-05-14 15:57:55.468  INFO 34594 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-05-14 15:57:55.468  INFO 34594 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-05-14 15:57:55.468  INFO 34594 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-05-14 15:57:55.470  INFO 34594 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler]
+2020-05-14 15:57:55.523  INFO 34594 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-05-14 15:57:55.769  INFO 34594 --- [    Test worker] b.a.s.AuthenticationManagerConfiguration : 
+
+Using default security password: eccab48c-3203-4ed1-8a99-b36516459faf
+
+2020-05-14 15:57:55.781  INFO 34594 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/css/**'], Ant [pattern='/js/**'], Ant [pattern='/images/**'], Ant [pattern='/webjars/**'], Ant [pattern='/**/favicon.ico'], Ant [pattern='/error']]], []
+2020-05-14 15:57:55.897  INFO 34594 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/**']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5a07e5a0, org.springframework.security.web.context.SecurityContextPersistenceFilter@1994459e, org.springframework.security.web.header.HeaderWriterFilter@5a05ea6d, org.springframework.security.web.authentication.logout.LogoutFilter@2085f2bd, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5554e56a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7d3c7c28, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@89fa760, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1b307632, org.springframework.security.web.session.SessionManagementFilter@2cd43079, org.springframework.security.web.access.ExceptionTranslationFilter@3ffb76e2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6c7bf83d]
+2020-05-14 15:57:55.913  INFO 34594 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:55.913  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:55.922  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 9 ms
+2020-05-14 15:57:56.484  INFO 34594 --- [    Test worker] autorota.AuthenticationTesting           : Started AuthenticationTesting in 3.176 seconds (JVM running for 42.847)
+2020-05-14 15:57:56.512  INFO 34594 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:56.512  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:56.514  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 2 ms
+2020-05-14 15:57:56.524  INFO 34594 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:56.524  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:56.526  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 2 ms
+2020-05-14 15:57:56.545  INFO 34594 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:56.548  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:56.549  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 1 ms
+2020-05-14 15:57:56.556  INFO 34594 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:56.556  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:56.560  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 4 ms
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

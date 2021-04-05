@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="SecurityTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-05-14T14:57:37" hostname="Simons-MBP.broadband" time="11.193">
+  <properties/>
+  <testcase name="authenticationTest" classname="SecurityTest" time="3.082"/>
+  <testcase name="unAuthenticationTest" classname="SecurityTest" time="0.045"/>
+  <testcase name="authorizationTest" classname="SecurityTest" time="8.066"/>
+  <system-out><![CDATA[2020-05-14 15:57:37.023  INFO 34594 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [SecurityTest], using SpringBootContextLoader
+2020-05-14 15:57:37.023  INFO 34594 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [SecurityTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-05-14 15:57:37.035  INFO 34594 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2020-05-14 15:57:37.038  INFO 34594 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@32dc2c3, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5a9286bb, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@460d50c8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5373ba51, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3ea54126, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@70ccbf17, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@5ceb3ad6, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1204a228, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6bc7d3f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@131d4ef8, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1625ebc7, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@21070ec9, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@44b7ca53]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::       (v1.5.10.RELEASE)
+
+2020-05-14 15:57:37.136  WARN 34594 --- [    Test worker] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/simonfkings/.gradle/caches/modules-2/files-2.1/org.json/json/20171018/36ced462c97f0845b4a7b266a25cebe95d18baa3/json-20171018.jar!/org/json/JSONObject.class
+	jar:file:/Users/simonfkings/.gradle/caches/modules-2/files-2.1/com.vaadin.external.google/android-json/0.0.20131108.vaadin1/fa26d351fe62a6a17f5cda1287c1c6110dec413f/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2020-05-14 15:57:37.137  INFO 34594 --- [    Test worker] SecurityTest                             : Starting SecurityTest on Simons-MBP.broadband with PID 34594 (/Users/simonfkings/svn/sfk7/code/trunk/build/classes/groovy/test started by simonfkings in /Users/simonfkings/svn/sfk7/code/trunk)
+2020-05-14 15:57:37.137  INFO 34594 --- [    Test worker] SecurityTest                             : No active profile set, falling back to default profiles: default
+2020-05-14 15:57:37.139  INFO 34594 --- [    Test worker] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@12590375: startup date [Thu May 14 15:57:37 BST 2020]; root of context hierarchy
+2020-05-14 15:57:37.716  INFO 34594 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$828f4371] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-14 15:57:37.826  INFO 34594 --- [    Test worker] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 0 (https)
+2020-05-14 15:57:37.829  INFO 34594 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-14 15:57:37.831  INFO 34594 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.27
+2020-05-14 15:57:37.916  WARN 34594 --- [ost-startStop-1] o.a.tomcat.util.scan.StandardJarScanner  : Failed to scan [file:/Users/simonfkings/.gradle/caches/modules-2/files-2.1/nz.ac.waikato.cms.weka.thirdparty/java-cup-11b/2015.03.26/6e97c5abd2e76d83220f09f72de0b89b6de18dc1/java-cup-11a-runtime.jar] from classloader hierarchy
+
+java.io.FileNotFoundException: /Users/simonfkings/.gradle/caches/modules-2/files-2.1/nz.ac.waikato.cms.weka.thirdparty/java-cup-11b/2015.03.26/6e97c5abd2e76d83220f09f72de0b89b6de18dc1/java-cup-11a-runtime.jar (No such file or directory)
+	at java.util.zip.ZipFile.open(Native Method) ~[na:1.8.0_151]
+	at java.util.zip.ZipFile.<init>(ZipFile.java:225) ~[na:1.8.0_151]
+	at java.util.zip.ZipFile.<init>(ZipFile.java:155) ~[na:1.8.0_151]
+	at java.util.jar.JarFile.<init>(JarFile.java:166) ~[na:1.8.0_151]
+	at java.util.jar.JarFile.<init>(JarFile.java:130) ~[na:1.8.0_151]
+	at org.apache.tomcat.util.compat.JreCompat.jarFileNewInstance(JreCompat.java:188) ~[tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.tomcat.util.scan.JarFileUrlJar.<init>(JarFileUrlJar.java:65) ~[tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.tomcat.util.scan.JarFactory.newInstance(JarFactory.java:49) ~[tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.tomcat.util.scan.StandardJarScanner.process(StandardJarScanner.java:374) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.tomcat.util.scan.StandardJarScanner.processURLs(StandardJarScanner.java:309) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.tomcat.util.scan.StandardJarScanner.doScanClassPath(StandardJarScanner.java:266) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.tomcat.util.scan.StandardJarScanner.scan(StandardJarScanner.java:229) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.jasper.servlet.TldScanner.scanJars(TldScanner.java:262) [tomcat-embed-jasper-9.0.0.M26.jar:9.0.0.M26]
+	at org.apache.jasper.servlet.TldScanner.scan(TldScanner.java:104) [tomcat-embed-jasper-9.0.0.M26.jar:9.0.0.M26]
+	at org.apache.jasper.servlet.JasperInitializer.onStartup(JasperInitializer.java:83) [tomcat-embed-jasper-9.0.0.M26.jar:9.0.0.M26]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5196) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1419) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1409) [tomcat-embed-core-8.5.27.jar:8.5.27]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_151]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_151]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_151]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_151]
+
+2020-05-14 15:57:37.919  INFO 34594 --- [ost-startStop-1] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-05-14 15:57:37.935  INFO 34594 --- [ost-startStop-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2020-05-14 15:57:37.936  INFO 34594 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 797 ms
+2020-05-14 15:57:38.100  INFO 34594 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-05-14 15:57:38.100  INFO 34594 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-05-14 15:57:38.100  INFO 34594 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2020-05-14 15:57:38.100  INFO 34594 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-05-14 15:57:38.101  INFO 34594 --- [ost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2020-05-14 15:57:38.101  INFO 34594 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2020-05-14 15:57:38.256  INFO 34594 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2020-05-14 15:57:38.257  INFO 34594 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-05-14 15:57:38.262  INFO 34594 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-05-14 15:57:38.339  INFO 34594 --- [    Test worker] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2020-05-14 15:57:38.370  INFO 34594 --- [    Test worker] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2020-05-14 15:57:38.377  WARN 34594 --- [    Test worker] o.h.j.i.EntityManagerFactoryRegistry     : HHH000436: Entity manager factory name (default) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
+2020-05-14 15:57:38.377  INFO 34594 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-14 15:57:38.906  INFO 34594 --- [    Test worker] o.s.s.w.a.c.ChannelProcessingFilter      : Validated configuration attributes
+2020-05-14 15:57:38.929  INFO 34594 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.access.channel.ChannelProcessingFilter@b14539b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5bbaa812, org.springframework.security.web.context.SecurityContextPersistenceFilter@7210ebce, org.springframework.security.web.header.HeaderWriterFilter@31d2d61a, org.springframework.security.web.authentication.logout.LogoutFilter@1ace4b9f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@48ce4e7f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7270b18d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5535dbdf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2a753547, org.springframework.security.web.session.SessionManagementFilter@7846ee48, org.springframework.security.web.access.ExceptionTranslationFilter@c819c35, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5991f8c1]
+2020-05-14 15:57:38.996  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:38.997  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:39.036  INFO 34594 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/access-denied],methods=[GET]}" onto public java.lang.String autorota.controller.AuthenticationController.error()
+2020-05-14 15:57:39.039  INFO 34594 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user-logout],methods=[GET]}" onto public java.lang.String autorota.controller.AuthenticationController.logout(org.apache.catalina.servlet4preview.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,org.springframework.ui.Model)
+2020-05-14 15:57:39.039  INFO 34594 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[GET]}" onto public java.lang.String autorota.controller.AuthenticationController.loginForm()
+2020-05-14 15:57:39.040  INFO 34594 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error-login],methods=[GET]}" onto public java.lang.String autorota.controller.AuthenticationController.invalidLogin(org.springframework.ui.Model)
+2020-05-14 15:57:39.043  INFO 34594 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home],methods=[GET]}" onto public java.lang.String autorota.controller.AuthenticationController.successLogin(org.springframework.ui.Model)
+2020-05-14 15:57:39.045  INFO 34594 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/availability],methods=[GET]}" onto public java.lang.String autorota.controller.AvailabilityController.availabilityPage(org.springframework.ui.Model)
+2020-05-14 15:57:39.045  INFO 34594 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/availability/add],methods=[POST]}" onto public java.lang.String autorota.controller.AvailabilityController.addAvailability(org.springframework.ui.Model,autorota.domain.Availability)
+2020-05-14 15:57:39.045  INFO 34594 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/booking],methods=[GET]}" onto public java.lang.String autorota.controller.BookingController.bookingPage(org.springframework.ui.Model)
+2020-05-14 15:57:39.047  INFO 34594 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/booking/new],methods=[POST]}" onto public java.lang.String autorota.controller.BookingController.newBooking(org.springframework.ui.Model,autorota.domain.Booking,org.springframework.validation.BindingResult) throws java.text.ParseException
+2020-05-14 15:57:39.065  INFO 34594 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/holiday],methods=[GET]}" onto public java.lang.String autorota.controller.HolidayController.holidayPage(org.springframework.ui.Model)
+2020-05-14 15:57:39.065  INFO 34594 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/holiday/new],methods=[POST]}" onto public java.lang.String autorota.controller.HolidayController.newHoliday(org.springframework.ui.Model,autorota.domain.Holiday,org.springframework.validation.BindingResult)
+2020-05-14 15:57:39.068  INFO 34594 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/holiday/all],methods=[GET]}" onto public java.lang.String autorota.controller.HolidayController.allHolidays(org.springframework.ui.Model)
+2020-05-14 15:57:39.068  INFO 34594 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/holiday/approved],methods=[GET]}" onto public java.lang.String autorota.controller.HolidayController.approveHoliday(org.springframework.ui.Model,int)
+2020-05-14 15:57:39.069  INFO 34594 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/my-profile],methods=[GET]}" onto public java.lang.String autorota.controller.ProfileController.profilePage(org.springframework.ui.Model)
+2020-05-14 15:57:39.070  INFO 34594 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/my-profile/edit],methods=[POST]}" onto public java.lang.String autorota.controller.ProfileController.editProfile(org.springframework.ui.Model,autorota.domain.UserInfo,org.springframework.validation.BindingResult)
+2020-05-14 15:57:39.073  INFO 34594 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/register/newUser],methods=[POST]}" onto public java.lang.String autorota.controller.RegisterController.addUser(autorota.domain.UserInfo,org.springframework.ui.Model,org.springframework.validation.BindingResult) throws java.io.IOException
+2020-05-14 15:57:39.074  INFO 34594 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/register/],methods=[GET]}" onto public java.lang.String autorota.controller.RegisterController.registerForm(org.springframework.ui.Model)
+2020-05-14 15:57:39.075  INFO 34594 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rota/],methods=[GET],params=[edit]}" onto public java.lang.String autorota.controller.RotaController.editRota(autorota.domain.Rota,org.springframework.ui.Model) throws java.io.IOException
+2020-05-14 15:57:39.075  INFO 34594 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rota/today],methods=[GET]}" onto public java.lang.String autorota.controller.RotaController.today(org.springframework.ui.Model) throws java.io.IOException
+2020-05-14 15:57:39.076  INFO 34594 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rota/],methods=[GET],params=[view]}" onto public java.lang.String autorota.controller.RotaController.viewRotaPage(org.springframework.ui.Model,autorota.domain.Rota) throws java.io.IOException
+2020-05-14 15:57:39.076  INFO 34594 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rota/],methods=[GET],params=[create]}" onto public java.lang.String autorota.controller.RotaController.createRotaPage(org.springframework.ui.Model,autorota.domain.Rota) throws java.lang.Exception
+2020-05-14 15:57:39.077  INFO 34594 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rota/add],methods=[POST]}" onto public java.lang.String autorota.controller.RotaController.newRota(autorota.domain.Rota,org.springframework.ui.Model,org.springframework.validation.BindingResult,org.springframework.web.bind.support.SessionStatus) throws java.lang.Exception
+2020-05-14 15:57:39.078  INFO 34594 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/rota/edited],methods=[POST]}" onto public java.lang.String autorota.controller.RotaController.editedRota(autorota.domain.Rota,org.springframework.ui.Model,org.springframework.validation.BindingResult)
+2020-05-14 15:57:39.080  INFO 34594 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/settings/save],methods=[POST]}" onto public java.lang.String autorota.controller.SettingsController.saveSettings(org.springframework.ui.Model,autorota.domain.Business,org.springframework.validation.BindingResult)
+2020-05-14 15:57:39.080  INFO 34594 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/settings],methods=[GET]}" onto public java.lang.String autorota.controller.SettingsController.settingsPage(org.springframework.ui.Model)
+2020-05-14 15:57:39.082  INFO 34594 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-05-14 15:57:39.083  INFO 34594 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-05-14 15:57:39.129  INFO 34594 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/resources/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-05-14 15:57:39.129  INFO 34594 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-05-14 15:57:39.129  INFO 34594 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-05-14 15:57:39.132  INFO 34594 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler]
+2020-05-14 15:57:39.162  INFO 34594 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2020-05-14 15:57:39.255  INFO 34594 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@12590375: startup date [Thu May 14 15:57:37 BST 2020]; root of context hierarchy
+2020-05-14 15:57:39.418  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 420 ms
+2020-05-14 15:57:39.664  INFO 34594 --- [    Test worker] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 60757 (https)
+2020-05-14 15:57:40.008  INFO 34594 --- [    Test worker] SecurityTest                             : Started SecurityTest in 2.962 seconds (JVM running for 26.371)
+2020-05-14 15:57:40.092  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:40.092  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:40.097  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 5 ms
+2020-05-14 15:57:40.115  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:40.116  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:40.119  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 3 ms
+2020-05-14 15:57:40.131  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:40.131  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:40.135  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 4 ms
+2020-05-14 15:57:40.153  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:40.154  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:40.157  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 3 ms
+2020-05-14 15:57:40.164  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:40.164  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:40.166  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 2 ms
+2020-05-14 15:57:40.176  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:40.176  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:40.179  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 3 ms
+2020-05-14 15:57:40.209  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:40.209  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:40.229  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 20 ms
+2020-05-14 15:57:40.238  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:40.244  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:40.266  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 9 ms
+2020-05-14 15:57:40.277  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:40.278  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:40.285  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 6 ms
+2020-05-14 15:57:40.316  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:40.316  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:40.319  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 3 ms
+2020-05-14 15:57:40.329  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:40.329  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:40.334  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 3 ms
+2020-05-14 15:57:40.358  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:40.359  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:40.361  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 2 ms
+2020-05-14 15:57:40.373  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:40.374  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:40.376  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 2 ms
+2020-05-14 15:57:40.382  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:40.384  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:40.387  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 3 ms
+2020-05-14 15:57:40.404  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:40.405  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:40.408  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 3 ms
+2020-05-14 15:57:40.419  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:40.419  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:40.422  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 3 ms
+2020-05-14 15:57:40.429  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:40.429  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:40.432  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 3 ms
+2020-05-14 15:57:40.441  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:40.441  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:40.446  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 5 ms
+2020-05-14 15:57:40.472  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:40.472  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:40.484  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 12 ms
+2020-05-14 15:57:40.517  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:40.517  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:40.521  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 3 ms
+2020-05-14 15:57:40.535  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:40.536  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:40.540  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 4 ms
+2020-05-14 15:57:40.554  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:40.554  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:40.558  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 4 ms
+2020-05-14 15:57:40.573  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:40.574  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:40.576  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 2 ms
+2020-05-14 15:57:40.584  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:40.585  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:40.589  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 4 ms
+2020-05-14 15:57:40.614  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:40.614  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:40.618  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 4 ms
+2020-05-14 15:57:40.626  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:40.627  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:40.630  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 2 ms
+2020-05-14 15:57:40.854  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:40.854  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:40.858  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 4 ms
+2020-05-14 15:57:41.036  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:41.036  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:41.038  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 2 ms
+2020-05-14 15:57:41.046  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:41.046  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:41.049  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 2 ms
+2020-05-14 15:57:41.060  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:41.071  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:41.097  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 8 ms
+2020-05-14 15:57:41.125  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:41.125  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:41.141  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 16 ms
+2020-05-14 15:57:41.165  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:41.165  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:41.172  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 7 ms
+2020-05-14 15:57:41.194  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:41.197  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:41.206  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 8 ms
+2020-05-14 15:57:41.231  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:41.231  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:41.238  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 7 ms
+2020-05-14 15:57:41.363  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:41.363  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:41.365  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 2 ms
+2020-05-14 15:57:41.372  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:41.372  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:41.374  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 2 ms
+2020-05-14 15:57:41.379  INFO 34594 --- [    Test worker] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-05-14 15:57:42.790  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:42.790  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:42.792  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 2 ms
+2020-05-14 15:57:43.744  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:43.744  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:43.746  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 2 ms
+2020-05-14 15:57:44.920  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:44.920  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:44.924  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 4 ms
+2020-05-14 15:57:44.930  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:44.930  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:44.932  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 2 ms
+2020-05-14 15:57:44.942  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:44.942  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:44.943  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 1 ms
+2020-05-14 15:57:44.948  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:44.948  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:44.951  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 2 ms
+2020-05-14 15:57:45.993  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:45.993  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:45.995  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 2 ms
+2020-05-14 15:57:46.004  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:46.004  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:46.006  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 2 ms
+2020-05-14 15:57:46.015  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:46.015  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:46.017  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 2 ms
+2020-05-14 15:57:46.023  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:46.023  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:46.025  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 2 ms
+2020-05-14 15:57:47.228  INFO 34594 --- [    Test worker] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring FrameworkServlet ''
+2020-05-14 15:57:47.228  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2020-05-14 15:57:47.230  INFO 34594 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 2 ms
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
