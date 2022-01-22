@@ -17,12 +17,12 @@ Details can be found in the src/main/resources/ application.properties
 
 To run the project on terminal run the following command:
 
-Windows
+### Windows
 ```
 gradlew bootrun
 ```
 
-Mac/Linux
+### Mac/Linux
 ```
 ./gradlew bootrun
 ```
